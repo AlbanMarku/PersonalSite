@@ -1,0 +1,9 @@
+.Home h4 {
+    display: block;
+}
+
+@media screen and (max-width: 400px) {
+    .Home h4 {
+        display: none;
+    }
+  }
