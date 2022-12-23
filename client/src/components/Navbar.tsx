@@ -26,42 +26,18 @@ function Navbar() {
       >
         <ul>
           <li>
-            <Link className="link" to="/">
+            <Link onClick={handleExpand} className="link" to="/">
               Home
             </Link>
           </li>
           <li>
-            <Link className="link" to="/projects">
+            <Link onClick={handleExpand} className="link" to="/projects">
               Projects
             </Link>
           </li>
         </ul>
       </div>
     </nav>
-    // <nav>
-    //   <div className="titleArea">
-    //     <h1>My site</h1>
-    //   </div>
-    //   <div className="listArea">
-    //     <ul>
-    //       <li>
-    //         <Link className="link" to="/">
-    //           Home
-    //         </Link>
-    //       </li>
-    //       <li>
-    //         <Link className="link" to="/projects">
-    //           Projects
-    //         </Link>
-    //       </li>
-    //       <li>
-    //         <Link className="link" to="/contact">
-    //           Contact
-    //         </Link>
-    //       </li>
-    //     </ul>
-    //   </div>
-    // </nav>
   );
 }
 
