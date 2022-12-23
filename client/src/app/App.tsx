@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Projects from '../views/Projects';
 import Home from '../views/Home';
 import Contact from '../views/Contact';
+import '../styles/app.css';
 
 function App() {
   return (
