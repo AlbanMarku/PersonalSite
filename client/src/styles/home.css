@@ -1,9 +1,13 @@
-.Home h4 {
-    display: block;
-}
-
-@media screen and (max-width: 400px) {
-    .Home h4 {
-        display: none;
+@media screen and (max-width: 768px) {
+    .welcomeSection {
+        height: calc(100vh - 60px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-  }
+
+    .aboutMe {
+        background-color: red;
+        height: 100vh;
+    }
+}
