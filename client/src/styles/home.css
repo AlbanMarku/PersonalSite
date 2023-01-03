@@ -20,6 +20,7 @@
         width: 70%;
         color: white;
         gap: 20px;
+        background-color: red;
     }
 
     .aboutMe p {
@@ -29,13 +30,26 @@
 
     .icons {
         margin: 30px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border: solid green;
+        width: 100%;
+        
+    }
+
+    .logos {
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logos img {
+        width: 70px;
     }
 
     #profilePic {
         margin: 30px;
-    }
-
-    .aboutMe img {
         width: 200px;
     }
 
