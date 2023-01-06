@@ -87,6 +87,11 @@ function Home() {
       </div>
       <div className="projectSection">
         <h1>projects go here</h1>
+        <div className="projectCard">
+          <h2>p</h2>
+          <button type="button">Live app</button>
+          <button type="button">GitHub repo</button>
+        </div>
       </div>
       <div className="contactMe">
         <h1>details go here</h1>
