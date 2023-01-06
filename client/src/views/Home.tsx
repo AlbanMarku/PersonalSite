@@ -12,6 +12,7 @@ import tslogo from '../assets/typescriptLogo.svg';
 import webpacklogo from '../assets/webpackLogo.svg';
 import vitestLogo from '../assets/vitestLogo.svg';
 import gitLogo from '../assets/githubLogo.svg';
+import cvDemo from '../assets/cvDemo.png';
 
 function Home() {
   return (
@@ -88,9 +89,16 @@ function Home() {
       <div className="projectSection">
         <h1>projects go here</h1>
         <div className="projectCard">
-          <h2>p</h2>
-          <button type="button">Live app</button>
-          <button type="button">GitHub repo</button>
+          <div
+            className="screenshotArea"
+            style={{ backgroundImage: `url(${cvDemo})` }}
+          >
+            <h2 className="projectTitle">CV creator</h2>
+          </div>
+          <div className="buttonArea">
+            <button type="button">Live app</button>
+            <button type="button">GitHub repo</button>
+          </div>
         </div>
       </div>
       <div className="contactMe">
