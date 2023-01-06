@@ -28,48 +28,60 @@ function Home() {
       <div className="aboutMe">
         <h1>About</h1>
         <img id="profilePic" src={logo} alt="profile" />
-        <p>
+        <p className="blurb">
           I have been studying computing in Dundee University for the past four
           years. I enjoy exploring new technologies and solutions in the field.
           Currently, I am focusing on Javascript and React.js.
         </p>
-        <p>Contact me for web development opportunities.</p>
+        <p className="blurb">Contact me for web development opportunities.</p>
         <div className="icons">
           <div className="logos">
             <img src={htmlLogo} alt="html5" />
+            <p>HTML</p>
           </div>
           <div className="logos">
-            <img src={csslogo} alt="html5" />
+            <img src={csslogo} alt="css" />
+            <p>CSS</p>
           </div>
           <div className="logos">
-            <img src={expresslogo} alt="html5" />
+            <img src={expresslogo} alt="express" />
+            <p>ExpressJS</p>
           </div>
           <div className="logos">
-            <img src={jslogo} alt="html5" />
+            <img src={jslogo} alt="js" />
+            <p>Javascript</p>
           </div>
           <div className="logos">
-            <img src={mongologo} alt="html5" />
+            <img src={mongologo} alt="mongo" />
+            <p>MongoDB</p>
           </div>
           <div className="logos">
-            <img src={nodejslogo} alt="html5" />
+            <img src={nodejslogo} alt="node" />
+            <p>NodeJS</p>
           </div>
           <div className="logos">
-            <img src={npmlogo} alt="html5" />
+            <img src={npmlogo} alt="npm" />
+            <p>NPM</p>
           </div>
           <div className="logos">
-            <img src={reactlogo} alt="html5" />
+            <img src={reactlogo} alt="react" />
+            <p>ReactJS</p>
           </div>
           <div className="logos">
-            <img src={tslogo} alt="html5" />
+            <img src={tslogo} alt="ts" />
+            <p>Typescript</p>
           </div>
           <div className="logos">
-            <img src={webpacklogo} alt="html5" />
+            <img src={webpacklogo} alt="webpack" />
+            <p>Webpack</p>
           </div>
           <div className="logos">
-            <img src={vitestLogo} alt="html5" />
+            <img src={vitestLogo} alt="vitest" />
+            <p>Vitest</p>
           </div>
           <div className="logos">
-            <img src={gitLogo} alt="html5" />
+            <img src={gitLogo} alt="git" />
+            <p>GitHub</p>
           </div>
         </div>
       </div>

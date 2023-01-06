@@ -10,7 +10,7 @@
     }
 
     .aboutMe {
-        height: 100vh;
+        min-height: 100vh;
         width: 100%;
         display: flex;
         justify-content: flex-start;
@@ -20,10 +20,9 @@
         width: 70%;
         color: white;
         gap: 20px;
-        background-color: red;
     }
 
-    .aboutMe p {
+    .blurb {
        font-size: 1.3rem; 
        text-align: center;
     }
@@ -32,7 +31,7 @@
         margin: 30px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        border: solid green;
+        grid-auto-rows: 100px;
         width: 100%;
         
     }
@@ -40,12 +39,17 @@
     .logos {
         max-width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding: 10px;
+        font-size: 0.8rem;
     }
 
     .logos img {
-        width: 70px;
+        width: 50px;
     }
 
     #profilePic {
