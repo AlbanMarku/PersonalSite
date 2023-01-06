@@ -1,12 +1,16 @@
 type Props = {
   title: string;
+  image: string;
 };
 
-function ProjectCard({ title }: Props) {
+function ProjectCard({ title, image }: Props) {
   return (
     <div className="ProjectCard">
-      <div className="screenshotArea">
-        <h2 className="projectTitle">{title}</h2>
+      <div
+        className="screenshotArea"
+        style={{ backgroundImage: `url(${image})` }}
+      >
+        <div className="projectTitle">{title}</div>
       </div>
       <div className="buttonArea">
         <button type="button">Live app</button>

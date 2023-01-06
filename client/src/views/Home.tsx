@@ -13,13 +13,19 @@ import tslogo from '../assets/typescriptLogo.svg';
 import webpacklogo from '../assets/webpackLogo.svg';
 import vitestLogo from '../assets/vitestLogo.svg';
 import gitLogo from '../assets/githubLogo.svg';
+import cvDemo from '../assets/cvDemo.png';
 
 type ProjCont = {
   title: string;
+  image: string;
 };
 
 function Home() {
-  const pList: ProjCont[] = [{ title: 'lmao' }];
+  const pList: ProjCont[] = [
+    { title: 'CV Creator', image: cvDemo },
+    { title: 'CV Creator', image: cvDemo },
+    { title: 'CV Creator', image: cvDemo },
+  ];
 
   return (
     <div className="Home">
@@ -95,7 +101,7 @@ function Home() {
       <div className="projectSection">
         <h1>projects go here</h1>
         {pList.map((obj) => (
-          <ProjectCard key={obj.title} title={obj.title} />
+          <ProjectCard key={obj.title} title={obj.title} image={obj.image} />
         ))}
       </div>
       <div className="contactMe">
