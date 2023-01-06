@@ -6,6 +6,7 @@ import Contact from '../views/Contact';
 import '../styles/app.css';
 
 function App() {
+  // TODO: Do homepage. Do project. Do contact.
   return (
     <div className="App">
       <Navbar />

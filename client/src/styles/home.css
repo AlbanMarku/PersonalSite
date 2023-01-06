@@ -59,16 +59,19 @@
 
     .projectSection {
         min-height: 100vh;
-        /* background-color: red; */
-        width: 100%;
+        width: 70%;
     }
 
-    .projectCard {
-        border: solid green;
+    .projectSection h1 {
+        text-align: center;
+    }
+
+    .ProjectCard {
         min-height: 300px;
         display: flex;
         flex-direction: column;
-
+        margin: 30px 0px;
+        gap: 20px;
     }
 
     .projectTitle {
@@ -85,10 +88,13 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        background-image: url("../assets/cvDemo.png");
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .buttonArea {
-        border: solid blue;
         flex: 0;
         display: flex;
         justify-content: center;
@@ -98,12 +104,12 @@
 
     .buttonArea button {
         padding: 10px;
-        border-style: none;
         color: white;
-        background-color: red;
+        background: none;
+        border: solid white 2px;
         text-align: center;
         border-radius: 5px;
-        width: 100px;
+        width: 100%;
     }
 
     .contactMe {

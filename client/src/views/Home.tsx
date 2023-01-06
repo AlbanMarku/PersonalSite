@@ -1,3 +1,4 @@
+import ProjectCard from '../components/ProjectCard';
 import '../styles/home.css';
 import logo from '../assets/logo.png';
 import htmlLogo from '../assets/html5Logo.svg';
@@ -12,9 +13,14 @@ import tslogo from '../assets/typescriptLogo.svg';
 import webpacklogo from '../assets/webpackLogo.svg';
 import vitestLogo from '../assets/vitestLogo.svg';
 import gitLogo from '../assets/githubLogo.svg';
-import cvDemo from '../assets/cvDemo.png';
+
+type ProjCont = {
+  title: string;
+};
 
 function Home() {
+  const pList: ProjCont[] = [{ title: 'lmao' }];
+
   return (
     <div className="Home">
       <div className="welcomeSection">
@@ -88,18 +94,9 @@ function Home() {
       </div>
       <div className="projectSection">
         <h1>projects go here</h1>
-        <div className="projectCard">
-          <div
-            className="screenshotArea"
-            style={{ backgroundImage: `url(${cvDemo})` }}
-          >
-            <h2 className="projectTitle">CV creator</h2>
-          </div>
-          <div className="buttonArea">
-            <button type="button">Live app</button>
-            <button type="button">GitHub repo</button>
-          </div>
-        </div>
+        {pList.map((obj) => (
+          <ProjectCard key={obj.title} title={obj.title} />
+        ))}
       </div>
       <div className="contactMe">
         <h1>details go here</h1>
