@@ -1,7 +1,7 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const path = require('path');
-require('dotenv').config({ path: './.env' });
+// require('dotenv').config({ path: './.env' }); // rm to fix render bug
 
 const app = express();
 const port = process.env.PORT || 8080;
@@ -26,19 +26,14 @@ app.post('/sendMail', async (req, res) => {
       },
     });
 
-    const info = {
+    const info = await transporter.sendMail({
       from: '"personal site" <no-reply@example.com>',
       subject: 'CV response',
       to: 'meritakol@gmail.com',
       text: `You got a response from ${req.body.email}:\n${req.body.message}`,
-    };
-
-    transporter.sendMail(info, (err, feedback) => {
-      if (err) console.log(err);
-      else console.log(feedback);
     });
 
-    console.log('done');
+    console.log(info.messageId);
     res.send('Email sent');
   } catch (error) {
     console.log(error);
