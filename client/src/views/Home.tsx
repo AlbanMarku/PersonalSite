@@ -1,3 +1,6 @@
+/* eslint-disable react/jsx-props-no-spreading */
+import React, { useState } from 'react';
+import { useForm, SubmitHandler } from 'react-hook-form';
 import ProjectCard from '../components/ProjectCard';
 import '../styles/home.css';
 import logo from '../assets/logo.png';
@@ -14,12 +17,33 @@ type ProjCont = {
   image: string;
 };
 
+type EmailInputs = {
+  email: string;
+  message: string;
+};
+
 function Home() {
+  const { register, handleSubmit } = useForm<EmailInputs>();
+
   const pList: ProjCont[] = [
     { title: 'CV Creator', image: cvDemo },
-    { title: 'CV Creator', image: cvDemo },
-    { title: 'CV Creator', image: cvDemo },
+    { title: 'd Creator', image: cvDemo },
+    { title: 's Creator', image: cvDemo },
   ];
+
+  const onMessage: SubmitHandler<EmailInputs> = async (data) => {
+    console.log(data);
+    try {
+      fetch('/sendMail', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+    } catch (error) {
+      console.log('errror yo');
+      console.log(error);
+    }
+  };
 
   return (
     <div className="Home">
@@ -75,7 +99,21 @@ function Home() {
         ))}
       </div>
       <div className="contactMe">
-        <h1>details go here</h1>
+        <h1>Contact me</h1>
+        <form onSubmit={handleSubmit(onMessage)}>
+          <label htmlFor="emailInput">
+            Email:
+            <input {...register('email', { required: true })} id="emailInput" />
+          </label>
+          <label htmlFor="messageInput">
+            Message:
+            <textarea
+              {...register('message', { required: true })}
+              id="messageInput"
+            />
+          </label>
+          <button type="submit">Send</button>
+        </form>
       </div>
     </div>
   );
