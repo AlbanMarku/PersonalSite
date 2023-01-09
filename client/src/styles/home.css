@@ -1,3 +1,7 @@
+:root {
+    --highlight-color: rgb(155, 37, 37);
+  }
+
 @media screen and (max-width: 768px) {
     .welcomeSection {
         height: calc(100vh - 60px);
@@ -116,6 +120,43 @@
 
     .contactMe {
         min-height: 100vh;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+    }
+
+    .contactMe h1 {
+        margin: 60px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .contactMe input, .contactMe textarea{
+        width: 300px;
+        padding: 10px;
+        margin: 5px 0px;
+        border-style: none;
+        color: black;
+    }
+
+    .contactMe button {
+        padding: 10px;
+        font-size: 1.5rem;
+        border-radius: 0px;
+        border-style: none;
+        text-align: center;
+        margin: 10px;
+        background-color: rgb(155, 37, 37);
+        color: rgb(216, 213, 208);
     }
 
 }
@@ -133,7 +174,7 @@ h1 {
 }
 
 #textName {
-    color: red;
+    color: var(--highlight-color);
 }
 
 #meButton {
@@ -143,7 +184,7 @@ h1 {
     color: white;
     border-radius: 10px;
     cursor: pointer;
-    border: solid red 3px;
+    border: solid rgb(155, 37, 37) 3px;
     margin-top: 20px;
 }
 

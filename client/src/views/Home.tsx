@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React, { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import ProjectCard from '../components/ProjectCard';
@@ -32,7 +31,6 @@ function Home() {
   ];
 
   const onMessage: SubmitHandler<EmailInputs> = async (data) => {
-    console.log(data);
     try {
       fetch('/sendMail', {
         method: 'POST',
@@ -40,7 +38,6 @@ function Home() {
         body: JSON.stringify(data),
       });
     } catch (error) {
-      console.log('errror yo');
       console.log(error);
     }
   };
@@ -102,12 +99,15 @@ function Home() {
         <h1>Contact me</h1>
         <form onSubmit={handleSubmit(onMessage)}>
           <label htmlFor="emailInput">
-            Email:
-            <input {...register('email', { required: true })} id="emailInput" />
+            <input
+              placeholder="Enter your email"
+              {...register('email', { required: true })}
+              id="emailInput"
+            />
           </label>
           <label htmlFor="messageInput">
-            Message:
             <textarea
+              placeholder="Enter your message"
               {...register('message', { required: true })}
               id="messageInput"
             />

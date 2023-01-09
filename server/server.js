@@ -17,15 +17,15 @@ app.get('*', (req, res) => {
 });
 
 app.post('/sendMail', async (req, res) => {
-  try {
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: 'meritakol@gmail.com',
-        pass: 'yhnbutcpzrmpjbdh',
-      },
-    });
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'meritakol@gmail.com',
+      pass: 'yhnbutcpzrmpjbdh',
+    },
+  });
 
+  try {
     const info = await transporter.sendMail({
       from: '"personal site" <no-reply@example.com>',
       subject: 'CV response',
@@ -34,8 +34,9 @@ app.post('/sendMail', async (req, res) => {
     });
 
     console.log(info.messageId);
-    res.send('Email sent');
+    res.json({ message: 'Email sent!' });
   } catch (error) {
     console.log(error);
+    res.json({ message: 'oops. Something went wrong.' });
   }
 });
