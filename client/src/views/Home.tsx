@@ -23,22 +23,33 @@ type EmailInputs = {
 
 function Home() {
   const { register, handleSubmit } = useForm<EmailInputs>();
+  const [statusSent, setStatusSent] = useState('');
 
   const pList: ProjCont[] = [
     { title: 'CV Creator', image: cvDemo },
-    { title: 'd Creator', image: cvDemo },
-    { title: 's Creator', image: cvDemo },
+    { title: 'Inventory App', image: cvDemo },
+    { title: 'Shopping Site', image: cvDemo },
   ];
 
   const onMessage: SubmitHandler<EmailInputs> = async (data) => {
     try {
-      fetch('/sendMail', {
+      const response = await fetch('/sendMail', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
+
+      if (!response.ok) {
+        throw new Error(response.statusText);
+        setStatusSent(
+          'Failed to send email. Email me at albanmarku@outlook.com'
+        );
+      }
+
+      setStatusSent('Email sent!');
     } catch (error) {
       console.log(error);
+      setStatusSent('Failed to send email. Email me at albanmarku@outlook.com');
     }
   };
 
@@ -114,11 +125,14 @@ function Home() {
           </label>
           <button type="submit">Send</button>
         </form>
+        <div className="statusMsg">
+          {statusSent ? <p>{statusSent}</p> : null}
+        </div>
       </div>
       <footer>
         <strong>AlbanMarku</strong>
         <a href="https://github.com/AlbanMarku">
-          <img src={logo} alt="" />
+          <img src={logo} alt="github" />
         </a>
       </footer>
     </div>
