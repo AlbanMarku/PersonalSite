@@ -22,7 +22,7 @@ app.post('/sendMail', async (req, res) => {
       service: 'gmail',
       auth: {
         user: 'meritakol@gmail.com',
-        pass: 'rqrhespohaydmmol',
+        pass: 'yhnbutcpzrmpjbdh',
       },
     });
 
