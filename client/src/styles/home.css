@@ -1,5 +1,6 @@
 :root {
     --highlight-color: rgb(155, 37, 37);
+    --backing-color: #292c35;
   }
 
 @media screen and (max-width: 768px) {
@@ -11,6 +12,8 @@
         text-align: center;
         flex-direction: column;
         width: 70%;
+        font-size: 1.6rem;
+        color: white;
     }
 
     .aboutMe {
@@ -119,7 +122,7 @@
     }
 
     .contactMe {
-        min-height: 100vh;
+        height: calc(100vh - 50px);
         color: white;
         display: flex;
         flex-direction: column;
@@ -129,7 +132,7 @@
     }
 
     .contactMe h1 {
-        margin: 60px;
+        margin: 60px 0px;
     }
 
     form {
@@ -145,7 +148,8 @@
         padding: 10px;
         margin: 5px 0px;
         border-style: none;
-        color: black;
+        color: white;
+        background-color: var(--backing-color);
     }
 
     .contactMe button {
@@ -155,10 +159,24 @@
         border-style: none;
         text-align: center;
         margin: 10px;
-        background-color: rgb(155, 37, 37);
+        background-color: var(--highlight-color);
         color: rgb(216, 213, 208);
     }
 
+    footer {
+        height: 50px;
+        color: rgb(216, 213, 208);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        background-color: var(--highlight-color);
+    }
+
+    footer img {
+        height: 40px;
+    }
 }
 
 .Home {

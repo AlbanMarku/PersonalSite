@@ -45,10 +45,10 @@ function Home() {
   return (
     <div className="Home">
       <div className="welcomeSection">
-        <h1>
+        <p>
           I am <span id="textName">Alban Marku</span>,
-        </h1>
-        <h1>applied computing graduate</h1>
+        </p>
+        <p>applied computing graduate</p>
         <button id="meButton" type="button">
           <strong>Learn more</strong>
         </button>
@@ -115,6 +115,12 @@ function Home() {
           <button type="submit">Send</button>
         </form>
       </div>
+      <footer>
+        <strong>AlbanMarku</strong>
+        <a href="https://github.com/AlbanMarku">
+          <img src={logo} alt="" />
+        </a>
+      </footer>
     </div>
   );
 }
