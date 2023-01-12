@@ -41,9 +41,6 @@ function Home() {
 
       if (!response.ok) {
         throw new Error(response.statusText);
-        setStatusSent(
-          'Failed to send email. Email me at albanmarku@outlook.com'
-        );
       }
 
       setStatusSent('Email sent!');
