@@ -15,6 +15,8 @@ import cvDemo from '../assets/cvDemo.png';
 type ProjCont = {
   title: string;
   image: string;
+  appLink: string;
+  repoLink: string;
 };
 
 type EmailInputs = {
@@ -34,9 +36,24 @@ function Home() {
   };
 
   const pList: ProjCont[] = [
-    { title: 'CV Creator', image: cvDemo },
-    { title: 'Inventory App', image: cvDemo },
-    { title: 'Shopping Site', image: cvDemo },
+    {
+      title: 'CV Creator',
+      image: cvDemo,
+      appLink: 'https://albanmarku.github.io/CvReact/',
+      repoLink: 'https://github.com/AlbanMarku/CvReact',
+    },
+    {
+      title: 'Inventory App',
+      image: cvDemo,
+      appLink: 'https://personalsite-6rk2.onrender.com',
+      repoLink: 'https://github.com/AlbanMarku/Inventory',
+    },
+    {
+      title: 'Shopping Site',
+      image: cvDemo,
+      appLink: 'https://shoppingcart-uwe1.onrender.com',
+      repoLink: 'https://github.com/AlbanMarku/ShoppingCart/tree/main/src',
+    },
   ];
 
   const onMessage: SubmitHandler<EmailInputs> = async (data) => {
@@ -108,7 +125,13 @@ function Home() {
       <div className="projectSection">
         <h1>My projects</h1>
         {pList.map((obj) => (
-          <ProjectCard key={obj.title} title={obj.title} image={obj.image} />
+          <ProjectCard
+            key={obj.title}
+            title={obj.title}
+            image={obj.image}
+            appLink={obj.appLink}
+            repoLink={obj.repoLink}
+          />
         ))}
       </div>
       <div className="contactMe">

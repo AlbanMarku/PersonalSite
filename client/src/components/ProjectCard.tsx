@@ -1,9 +1,19 @@
 type Props = {
   title: string;
   image: string;
+  appLink: string;
+  repoLink: string;
 };
 
-function ProjectCard({ title, image }: Props) {
+function ProjectCard({ title, image, appLink, repoLink }: Props) {
+  const handleApp = () => {
+    window.open(appLink, '_blank');
+  };
+
+  const handleRepo = () => {
+    window.open(repoLink, '_blank');
+  };
+
   return (
     <div className="ProjectCard">
       <div
@@ -13,8 +23,12 @@ function ProjectCard({ title, image }: Props) {
         <div className="projectTitle">{title}</div>
       </div>
       <div className="buttonArea">
-        <button type="button">Live app</button>
-        <button type="button">GitHub repo</button>
+        <button onClick={handleApp} type="button">
+          Live app
+        </button>
+        <button onClick={handleRepo} type="button">
+          GitHub repo
+        </button>
       </div>
     </div>
   );
