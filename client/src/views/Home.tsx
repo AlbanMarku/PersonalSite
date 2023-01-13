@@ -87,7 +87,7 @@ function Home() {
         <p>
           I am <span id="textName">Alban Marku</span>,
         </p>
-        <p>applied computing graduate</p>
+        <p>Applied Computing graduate</p>
         <button onClick={handleScroll} id="meButton" type="button">
           <strong>Learn more</strong>
         </button>
@@ -100,6 +100,12 @@ function Home() {
           years. I enjoy exploring new technologies and solutions in the field.
           Currently, I am focusing on Javascript and React.js.
         </p>
+
+        <p className="blurb">
+          I specialise in front-end development, but I am also a capable backend
+          developer.
+        </p>
+
         <p className="blurb">Contact me for web development opportunities.</p>
         <div className="icons">
           <div className="logos">
