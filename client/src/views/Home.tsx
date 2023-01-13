@@ -140,8 +140,9 @@ function Home() {
           <p>
             Below are some projects I have worked on. Each project had a purpose
             of practicing a certain aspect of web development such as working
-            with APIs and React Hooks. More can be found on my GitHub.
+            with APIs and React Hooks.
           </p>
+          <p>More can be found on my GitHub.</p>
         </div>
         <div className="projectList">
           {pList.map((obj) => (

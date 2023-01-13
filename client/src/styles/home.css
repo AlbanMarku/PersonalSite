@@ -30,7 +30,7 @@
     }
 
     .blurb {
-       font-size: 1rem; 
+       font-size: 1.3rem; 
        text-align: center;
        line-height: 1.3;
        font-weight: 300;
@@ -373,16 +373,20 @@
     footer img {
         height: 40px;
     }
-
-    .description {
-        color: white;
-        font-size: 1.3rem;
-        text-align: center;
-        line-height: 1.3;
-        font-weight: 300;
-        margin: 30px;
-    }
     
+}
+
+.description {
+    color: white;
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 1.3;
+    font-weight: 300;
+    margin: 30px;
+}
+
+.description p {
+    margin: 30px;
 }
 
 
