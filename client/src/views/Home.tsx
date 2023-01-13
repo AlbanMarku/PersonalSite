@@ -54,6 +54,12 @@ function Home() {
       appLink: 'https://shoppingcart-uwe1.onrender.com',
       repoLink: 'https://github.com/AlbanMarku/ShoppingCart/tree/main/src',
     },
+    {
+      title: 'Weather App',
+      image: cvDemo,
+      appLink: 'https://albanmarku.github.io/WeatherApp/',
+      repoLink: 'https://github.com/AlbanMarku/WeatherApp',
+    },
   ];
 
   const onMessage: SubmitHandler<EmailInputs> = async (data) => {
@@ -124,15 +130,24 @@ function Home() {
       </div>
       <div className="projectSection">
         <h1>My projects</h1>
-        {pList.map((obj) => (
-          <ProjectCard
-            key={obj.title}
-            title={obj.title}
-            image={obj.image}
-            appLink={obj.appLink}
-            repoLink={obj.repoLink}
-          />
-        ))}
+        <div className="description">
+          <p>
+            Below are some projects I have worked on. Each project had a purpose
+            of practicing a certain aspect of web development such as working
+            with APIs and React Hooks. More can be found on my GitHub.
+          </p>
+        </div>
+        <div className="projectList">
+          {pList.map((obj) => (
+            <ProjectCard
+              key={obj.title}
+              title={obj.title}
+              image={obj.image}
+              appLink={obj.appLink}
+              repoLink={obj.repoLink}
+            />
+          ))}
+        </div>
       </div>
       <div className="contactMe">
         <h1>Contact me</h1>
