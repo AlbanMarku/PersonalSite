@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import ProjectCard from '../components/ProjectCard';
 import '../styles/home.css';
 import logo from '../assets/logo.png';
+import man from '../assets/man.png';
 import expresslogo from '../assets/expressLogo.svg';
 import mongologo from '../assets/mongodbLogo.svg';
 import reactlogo from '../assets/reactLogo.svg';
@@ -24,6 +25,13 @@ type EmailInputs = {
 function Home() {
   const { register, handleSubmit } = useForm<EmailInputs>();
   const [statusSent, setStatusSent] = useState('');
+  const myRef = useRef<HTMLInputElement | null>(null);
+
+  const handleScroll = () => {
+    if (myRef.current) {
+      myRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   const pList: ProjCont[] = [
     { title: 'CV Creator', image: cvDemo },
@@ -57,13 +65,13 @@ function Home() {
           I am <span id="textName">Alban Marku</span>,
         </p>
         <p>applied computing graduate</p>
-        <button id="meButton" type="button">
+        <button onClick={handleScroll} id="meButton" type="button">
           <strong>Learn more</strong>
         </button>
       </div>
-      <div className="aboutMe">
+      <div ref={myRef} className="aboutMe">
         <h1>About</h1>
-        <img id="profilePic" src={logo} alt="profile" />
+        <img id="profilePic" src={man} alt="profile" />
         <p className="blurb">
           I have been studying computing in Dundee University for the past four
           years. I enjoy exploring new technologies and solutions in the field.
@@ -98,7 +106,7 @@ function Home() {
         </div>
       </div>
       <div className="projectSection">
-        <h1>projects go here</h1>
+        <h1>My projects</h1>
         {pList.map((obj) => (
           <ProjectCard key={obj.title} title={obj.title} image={obj.image} />
         ))}
