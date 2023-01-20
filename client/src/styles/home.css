@@ -279,7 +279,6 @@ footer img {
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        border: solid orange;
     }
 
     .projectList {
@@ -287,11 +286,7 @@ footer img {
         display: grid;
         grid-template-columns: repeat(2, minmax(200px, 500px));
         gap: 20px;
-        border: solid red;
         justify-content: center;
-    }
-    .ProjectCard {
-        border: solid pink;
     }
 
     .contactMe {
