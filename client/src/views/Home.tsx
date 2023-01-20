@@ -53,7 +53,7 @@ function Home() {
     },
     {
       title: 'Shopping Site',
-      image: cartDemo,
+      image: cvDemo,
       appLink: 'https://shoppingcart-uwe1.onrender.com',
       repoLink: 'https://github.com/AlbanMarku/ShoppingCart/tree/main/src',
     },
