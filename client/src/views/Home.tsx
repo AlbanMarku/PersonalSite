@@ -47,7 +47,7 @@ function Home() {
     },
     {
       title: 'Inventory App',
-      image: invDemo,
+      image: cvDemo,
       appLink: 'https://fullstackinventory.onrender.com/',
       repoLink: 'https://github.com/AlbanMarku/Inventory',
     },
