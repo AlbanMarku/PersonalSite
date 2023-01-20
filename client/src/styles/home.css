@@ -129,6 +129,7 @@ h1 {
 
 .buttonArea button {
     padding: 10px;
+    margin: 0;
     color: white;
     background: none;
     border: solid var(--highlight-color) 2px;
