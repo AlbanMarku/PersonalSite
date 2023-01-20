@@ -59,7 +59,7 @@ function Home() {
     },
     {
       title: 'Weather App',
-      image: weatherDemo,
+      image: cvDemo,
       appLink: 'https://albanmarku.github.io/WeatherApp/',
       repoLink: 'https://github.com/AlbanMarku/WeatherApp',
     },
