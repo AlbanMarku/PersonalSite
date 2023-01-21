@@ -12,7 +12,7 @@ import webpacklogo from '../assets/webpackLogo.svg';
 import vitestLogo from '../assets/vitestLogo.svg';
 import cvDemo from '../assets/cvDemo.png';
 import invDemo from '../assets/tester.png';
-import cartDemo from '../assets/cart.png';
+import cartDemo from '../assets/cartDemo.png';
 import weatherDemo from '../assets/weather.png';
 
 type ProjCont = {
