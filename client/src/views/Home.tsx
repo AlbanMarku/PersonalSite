@@ -11,9 +11,9 @@ import tslogo from '../assets/typescriptLogo.svg';
 import webpacklogo from '../assets/webpackLogo.svg';
 import vitestLogo from '../assets/vitestLogo.svg';
 import cvDemo from '../assets/cvDemo.png';
-import invDemo from '../assets/tester.png';
+import invDemo from '../assets/invDemo.png';
 import cartDemo from '../assets/cartDemo.png';
-import weatherDemo from '../assets/weather.png';
+import weatherDemo from '../assets/weatherDemo.png';
 
 type ProjCont = {
   title: string;
@@ -47,7 +47,7 @@ function Home() {
     },
     {
       title: 'Inventory App',
-      image: cvDemo,
+      image: invDemo,
       appLink: 'https://fullstackinventory.onrender.com/',
       repoLink: 'https://github.com/AlbanMarku/Inventory',
     },
@@ -59,7 +59,7 @@ function Home() {
     },
     {
       title: 'Weather App',
-      image: cvDemo,
+      image: weatherDemo,
       appLink: 'https://albanmarku.github.io/WeatherApp/',
       repoLink: 'https://github.com/AlbanMarku/WeatherApp',
     },
