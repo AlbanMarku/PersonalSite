@@ -1,5 +1,5 @@
 import '../styles/navbar.css';
-import pdf from '../assets/Resume-1.pdf';
+import pdf from '../assets/cv.pdf';
 
 function Navbar() {
   const handleClick = () => {
