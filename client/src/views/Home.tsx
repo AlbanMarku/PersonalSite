@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import ProjectCard from '../components/ProjectCard';
+import Arrow from '../components/arrrow';
 import '../styles/home.css';
 import logo from '../assets/logo.png';
 import man from '../assets/man.png';
@@ -93,6 +94,7 @@ function Home() {
         <p>Applied Computing graduate</p>
         <button onClick={handleScroll} id="meButton" type="button">
           <strong>Learn more</strong>
+          <Arrow />
         </button>
       </div>
       <div ref={myRef} className="aboutMe">

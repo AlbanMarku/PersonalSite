@@ -49,8 +49,19 @@ h1 {
     color: white;
     border-radius: 10px;
     cursor: pointer;
-    border: solid rgb(155, 37, 37) 3px;
+    border: 5px solid;
+    border-image-slice: 1;
+    background: linear-gradient(rgb(13, 13, 48),rgb(13, 13, 48)) padding-box, linear-gradient(90deg, darkblue, darkorchid) border-box ;
+    border-color: transparent;
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#meButton:hover {
+    background: linear-gradient(var(--backing-color),var(--backing-color)) padding-box, linear-gradient(90deg, darkblue, darkorchid) border-box ;
 }
 
 .aboutMe {
