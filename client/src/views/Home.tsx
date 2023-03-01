@@ -68,11 +68,14 @@ function Home() {
 
   const onMessage: SubmitHandler<EmailInputs> = async (data) => {
     try {
-      const response = await fetch('/sendMail', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        'https://backend-rl3l.onrender.com/sendMail',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        }
+      );
 
       if (!response.ok) {
         throw new Error(response.statusText);
