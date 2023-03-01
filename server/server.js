@@ -1,6 +1,7 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const path = require('path');
+const cors = require('cors');
 // require('dotenv').config({ path: './.env' }); // rm to fix render bug
 
 const app = express();
@@ -12,6 +13,7 @@ const { PASSWORD } = process.env;
 
 app.use(express.static(path.resolve(__dirname, '../client/dist')));
 app.use(express.json({ limit: '1mb', strict: true }));
+app.use(cors());
 
 console.log(`API server is listening on port:${port}`);
 
