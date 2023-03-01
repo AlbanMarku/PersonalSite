@@ -22,10 +22,7 @@ app.get('*', (req, res) => {
 });
 
 app.post('/sendMail', async (req, res) => {
-  res.header(
-    'Access-Control-Allow-Origin',
-    'https://frontend-whny.onrender.com'
-  );
+  res.header('Access-Control-Allow-Origin', 'https://www.albanmarku.com/');
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
